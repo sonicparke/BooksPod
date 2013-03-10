@@ -1,0 +1,275 @@
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script> -->
+<script src="http://cdn.jquerytools.org/1.2.7/tiny/jquery.tools.min.js"></script>
+<script>
+    jQuery(document).ready(function($) {
+        $(".btnBuyNow[rel]").overlay();
+    });
+</script>
+
+<style>
+/*** BOOK LIST ***/
+.bookListPod {
+    width:134px;
+    height:210px;
+    padding:2px;
+    float:left;
+    margin-right:56px;
+    margin-bottom:145px;
+}
+
+.bookListPod img {
+    width:120px;
+    height:196px;
+    border:1px solid #393939;
+    padding:2px;
+    margin-bottom:10px;
+    width:134px;
+    height:210px;
+}
+
+.bookListText {
+    color:#5f4427;
+    font-size:10px;
+    font-family:Helvetica,Arial;
+    text-align:center;
+}
+
+.bookListText a.btnBuyNow {
+    background:#900;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    padding:4px;
+    line-height:24px;
+    color:#fff;
+    text-transform:uppercase;
+    font-weight:bold;
+    -moz-box-shadow:0px 0px 4px #494949;
+    -webkit-box-shadow:0px 0px 4px #494949;
+}
+
+.bookListText a.btnBuyNow:hover {
+    text-decoration:none;
+    background:#c9c9c9;
+}
+
+
+/*** BOOK GALLERY ***/
+.bookGallery {
+    width:583px;
+    min-height:600px;
+    padding:25px 10px 15px 25px;
+    background:#c9c9c9;
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    -moz-box-shadow:0px 0px 5px #393939;
+    -webkit-box-shadow:0px 0px 5px #393939;
+    margin-top:30px;
+    margin-left:12px;
+    font-size:14px;
+    line-height:18px;
+}
+
+.bookGalleryTitle {
+    width:572px;
+    height:30px;
+    margin-bottom:30px;
+    font-size:30px;
+    color:#393939;
+}
+
+.bookGalleryImg {
+    float:left;
+}
+
+.bookGalleryText {
+    color:#5f4427;
+    font-size:10px;
+    font-family:Helvetica,Arial;
+    text-align:center;
+}
+
+/*** FEATURED BOOK ***/
+    .featuredBook {
+        width:563px;
+        min-height:350px;
+        padding:10px 30px 35px 25px;
+        background:#e9e9e9;
+        -moz-border-radius:7px;
+        -webkit-border-radius:7px;
+        -moz-box-shadow:0px 0px 5px #393939;
+        -webkit-box-shadow:0px 0px 5px #393939;
+        margin:30px 0;
+        font-size:14px;
+        line-height:18px;
+        overflow:hidden;
+        position:relative;
+        font-size:12px;
+        font-family:Helvetica,Arial;
+    }
+
+    .featuredBook p {
+        margin-bottom:15px;
+    }
+
+    .featuredBook img{
+        width:200px;
+        border:1px solid #000;
+        padding:2px;
+        margin-top:20px;
+        margin-right:25px;
+        margin-left:15px;
+        margin-bottom:10px;
+        float:left;
+    }
+
+    .featBookBanner {
+        position:absolute;
+        right:-1px;
+        top:0px;
+        height:78px;
+        width:131px;
+        /* background: url( <?php echo get_bloginfo ( 'template_directory' );  ?>/images/featbookbanner.png) right top no-repeat; */
+    }
+
+    .featuredBook h1 {
+        border:none;
+        padding-bottom:0px;
+        width:483px;
+        margin-top:12px;
+        background:none;
+    }
+
+    .featuredBook .header p {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        line-height: 100%;
+    }
+
+
+/**********************************
+    Buy Now Popup
+**********************************/
+/* the overlayed element */
+.simple_overlay {
+    display:none;
+    z-index:10000;
+    background: #ffffff; /* SET THE BACKGROUND */
+    width:675px;
+    min-height:200px;
+    border:1px solid #999999;
+    padding: 20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -moz-box-shadow:0 0 90px 5px #000;
+    -webkit-box-shadow: 0 0 90px #000;
+}
+
+.simple_overlay .close {
+    background:url( <?php echo get_bloginfo ( 'template_directory' );  ?>/images/close.png) no-repeat transparent; /* POINT TO THE CLOSE IMAGE */
+    position:absolute;
+    right:-17px;
+    top:-10px;
+    cursor:pointer;
+    height:35px;
+    width:35px;
+    -moz-border-radius: none;
+    -webkit-border-radius: none;
+    border-radius: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.simple_overlay .close:hover {
+    background: url( <?php echo get_bloginfo ( 'template_directory' );  ?>/images/close.png) no-repeat transparent;
+}
+
+
+.simple_overlay .bookstoreLinks li {
+    display: inline-block;
+    padding: 10px;
+}
+
+.simple_overlay a img {
+    width:auto;
+    height:auto;
+    margin-bottom:10px;
+}
+
+.booksingle .simple_overlay {
+    text-align: center; 
+}
+
+.booksingle .simple_overlay img {
+    float: none;
+    max-width: 134px;   
+}
+
+.simple_overlay li a {
+    -moz-border-radius: none;
+    -webkit-border-radius: none;
+    border-radius: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;   
+    box-shadow: none;
+    color: #FFFFFF;
+}
+
+.simple_overlay h1 {
+    color: #3D241E;
+    border-bottom: 1px dotted #393939;
+    font-size: 35px;
+    font-weight: normal;
+    line-height: 40px;
+    margin-bottom: 13px;
+    padding-bottom: 10px;
+    padding-right: 250px;
+    /* background: url( <?php echo get_bloginfo ( 'template_directory' );  ?>/images/bg_h1swirl.png) no-repeat scroll right top transparent; */
+}
+
+.simple_overlay h1 span {
+    color: #990000;
+    font-style: italic; 
+}
+
+.simple_overlay .left {
+    float: left;
+    width: 225px;
+}
+
+.simple_overlay .right {
+    float: right;
+    width: 425px;
+}
+
+.buttonBookstore {
+    display: block;
+    background: url(<?php echo get_bloginfo ( 'template_directory' );  ?>/images/jhc_books/retailer_sprite.png) no-repeat 0 0;
+    width: 145px;
+    height: 40px;
+    text-indent: -999999px;
+}
+
+.buttonAmazon {
+    background-position: 0 0;
+}
+
+.buttonBN {
+    background-position: 0 -96px;
+}
+
+/* new clearfix */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+</style>
