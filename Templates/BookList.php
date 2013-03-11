@@ -6,8 +6,20 @@
     </div>
     <div class="bookListText">
         <h4>{@name}</h4>
-        <h6>{@genre}</h6>
-        <p>{@publisher} / {@year} / {@format}</p>
+        <?php if ( 0 < strlen( $obj->field( 'genre' ) ) ) { ?>
+            <h6>{@genre}</h6>
+        <?php } ?>
+        <p>
+            <?php if ( 0 < strlen( $obj->field( 'publisher' ) ) ) { ?>
+                {@publisher}
+            <?php } ?>
+            <?php if ( 0 < strlen( $obj->field( 'year' ) ) ) { ?>
+                / {@year}
+            <?php } ?>
+            <?php if ( 0 < strlen( $obj->field( 'format' ) ) ) { ?>
+                / {@format}
+            <?php } ?>
+        </p>
         <div class="overlayWindowWrapper">
             <a href="#" rel="#{@permalink}" alt="Take a Chance on Me" target="_blank" class="btnBuyNow" data-bookid="take-a-chance-on-me">Buy Now!</a>
             <!-- first overlay. id attribute matches our selector -->
@@ -16,7 +28,9 @@
                     <h1>Buy <span>{@title}</span> now from these fine book sellers!</h1>
                 </div>
                 <div class="left">
+                    <?php if ( 0 < strlen( $obj->field( 'book_image' ) ) ) { ?>
                     <img src="{@book_image}" alt="{@title}">
+                    <?php } ?>
                 </div>
                 <div class="right">
                     <ul class="bookstoreLinks">
@@ -43,5 +57,4 @@
             </div>
         </div>
     </div>
-
 </div>

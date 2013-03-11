@@ -1,8 +1,10 @@
 <div class="featuredBook">
     <div>
+        <?php if ( 0 < strlen( $obj->field( 'book_image' ) ) ) { ?>
         <a class="button" href="{@detail_url}">
             <img src="{@book_image}" alt="{@name}">
         </a>
+        <?php } ?>
     </div>
     <div class="header">
     <?php if ( 0 < strlen( $obj->field( 'name' ) ) ) { ?>
