@@ -1,7 +1,7 @@
 <div class="bookListPod">
     <div class="bookListImg">
         <a class="button" href="{@detail_url}">
-            <img src="{@book_image}" alt="{@name}">
+            <img src="<?php echo pods_image_url( $obj->field( 'book_image' ), array( 134, 210 ), 0, true )  ?>" alt="{@title}" />
         </a>
     </div>
     <div class="bookListText">
@@ -13,8 +13,8 @@
             <?php if ( 0 < strlen( $obj->field( 'publisher' ) ) ) { ?>
                 {@publisher}
             <?php } ?>
-            <?php if ( 0 < strlen( $obj->field( 'year' ) ) ) { ?>
-                / {@year}
+            <?php if ( 0 < strlen( $obj->field( 'publish_date' ) ) ) { ?>
+                / {@publish_date}
             <?php } ?>
             <?php if ( 0 < strlen( $obj->field( 'format' ) ) ) { ?>
                 / {@format}
@@ -29,7 +29,7 @@
                 </div>
                 <div class="left">
                     <?php if ( 0 < strlen( $obj->field( 'book_image' ) ) ) { ?>
-                    <img src="{@book_image}" alt="{@title}">
+                    <img src="<?php echo pods_image_url( $obj->field( 'book_image' ), array( 134, 210 ), 0, true )  ?>" alt="{@title}" />
                     <?php } ?>
                 </div>
                 <div class="right">

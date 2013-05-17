@@ -10,7 +10,7 @@ $pod_featured_book = pods( 'books', $params ); // Maps to the new find method
 echo $pod_featured_book->find( $params )->template( 'featuredbook' ); // Display it to the template
 
 // Grab the pod records
-$params = array( 'orderby' => 'name ASC', 'limit' => 3 ); // Get 3 records per page, ordered by name ascending
+$params = array( 'orderby' => 'display_order ASC', 'limit' => 15 ); // Get 15 records per page, ordered by name ascending
 $pod_books = pods( 'books', $params ); // Maps to the new find method
 echo $pod_books->find( $params )->template( 'booklist' ); // Display it to the template
 echo $pod_books->pagination(); // Display the pagination

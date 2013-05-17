@@ -1,20 +1,20 @@
 <?php
 // Get the URL
-function curPageURL() {
- $pageURL = 'http';
- if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
- $pageURL .= "://";
- if ($_SERVER["SERVER_PORT"] != "80") {
-  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
- } else {
-  $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
- }
- return $pageURL;
-}
-// Parse the URL to get the last part of Path which in this case is the genre permalink
-$parts=parse_url(curPageURL());
-$path_parts=explode('/', $parts['path']);
-$genre_url =  $path_parts[count($path_parts)-1];
+    function curPageURL() {
+     $pageURL = 'http';
+     if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+     $pageURL .= "://";
+     if ($_SERVER["SERVER_PORT"] != "80") {
+      $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+     } else {
+      $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+     }
+     return $pageURL;
+    }
+    // Parse the URL to get the last part of Path which in this case is the genre permalink
+    $parts=parse_url(curPageURL());
+    $path_parts=explode('/', $parts['path']);
+    $genre_url =  $path_parts[count($path_parts)-1];
 
 // Load the Header Code (CSS & JS on Doc Ready)
 $params = array( 'limit' => 1 ); // Get the CSS in the bookscss template. limiting to one so it only loads once

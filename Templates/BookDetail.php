@@ -1,6 +1,8 @@
 <div class="bookDetail">
     <div class="book_image">
-        <a href="books/{@permalink}"><img src="{@book_image}" alt="{@title}" /></a>
+        <a href="books/{@permalink}">
+            <img src="<?php echo pods_image_url( $obj->field( 'book_image' ), array( 250, 381 ), 0, true )  ?>" alt="{@title}" />
+        </a>
     </div>
     <div class="header">
         <?php if ( 0 < strlen( $obj->field( 'name' ) ) ) { ?>
@@ -31,7 +33,7 @@
             </div>
             <div class="left">
                 <?php if ( 0 < strlen( $obj->field( 'book_image' ) ) ) { ?>
-                <img src="{@book_image}" alt="{@title}">
+                <img src="<?php echo pods_image_url( $obj->field( 'book_image' ), array( 134, 210 ), 0, true )  ?>" alt="{@title}" />
                 <?php } ?>
             </div>
             <div class="right">

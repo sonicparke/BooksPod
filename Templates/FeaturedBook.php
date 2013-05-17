@@ -2,7 +2,7 @@
     <div>
         <?php if ( 0 < strlen( $obj->field( 'book_image' ) ) ) { ?>
         <a class="button" href="{@detail_url}">
-            <img src="{@book_image}" alt="{@name}">
+            <img src="<?php echo pods_image_url( $obj->field( 'book_image' ), array( 200, 300 ), 0, true )  ?>" alt="{@title}" />
         </a>
         <?php } ?>
     </div>
