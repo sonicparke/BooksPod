@@ -2,22 +2,35 @@
 <script src="http://cdn.jquerytools.org/1.2.7/tiny/jquery.tools.min.js"></script>
 <script>
     jQuery(document).ready(function($) {
-        $(".btnBuyNow[rel]").overlay({
-            left: '25%'
-        });
-    });
+        $(".btnBuyNow[rel]").overlay({ left: '25%' }); });
 </script>
 
 <style>
 /*** BOOK LIST ***/
-.bookListPod {
-    width:134px;
-    height:210px;
-    padding:2px;
-    float:left;
-    margin-right:56px;
-    margin-bottom:145px;
+    #left-area {
+        width:64%;
+        margin:0 !important;
+        float:left;
+        padding:0 30px 30px 30px;
+    }
+
+    #content-area #left-area {
+        width:64%;
+        float:left;
+    }
+
+    .bookListPod {
+    width: 152px;
+    height: 255px;
+    padding: 2px;
+    float: left;
+    margin-right: 48px;
+    margin-bottom: 180px;
 }
+
+    .bookListImg a.button {
+        border:none;
+    }
 
 .bookListPod img {
     width:120px;
@@ -30,34 +43,93 @@
 }
 
 .bookListText {
-    color:#5f4427;
-    font-size:10px;
-    font-family:Helvetica,Arial;
+    color:#999999;
+    font-size:11px;
+    font-family:"TexGyreAdventorRegular",Helvetica,Arial;
+        text-transform:uppercase;
     text-align:center;
 }
 
+    .bookListText h4 {
+        font-size:15px;
+    }
+
 .bookListText a.btnBuyNow {
-    background:#900;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    padding:4px;
+        border:1px solid #f3ead7;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+        border-radius:5px;
+    padding:7px 11px;
     line-height:24px;
-    color:#fff;
+    color:#755a2b;
     text-transform:uppercase;
-    font-weight:bold;
-    -moz-box-shadow:0px 0px 4px #494949;
-    -webkit-box-shadow:0px 0px 4px #494949;
+    font-weight:100;
+        font-size:13px;
+        font-family:"Helvetica Neue", omnes-pro,Helvetica,Arial,sans-serif;
+}
+
+    a.btnBuyNow {
+         border:1px solid #f3ead7;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+        border-radius:5px;
+    padding:7px 11px;
+    line-height:24px;
+    color:#755a2b;
+    text-transform:uppercase;
+    font-weight:100;
+        font-size:13px;
+        font-family:"Helvetica Neue", omnes-pro,Helvetica,Arial,sans-serif;
 }
 
 .bookListText a.btnBuyNow:hover {
     text-decoration:none;
-    background:#c9c9c9;
+        color:#ffffff;
+        text-shadow:1px 1px 0 #333333;
 }
 
+    a.btnBuyNow:hover {
+    text-decoration:none;
+        color:#ffffff;
+        text-shadow:1px 1px 0 #333333;
+}
+
+
+    .book_image {
+        max-width:250px;
+        float:left;
+        margin-right:15px;
+        margin-bottom:15px;
+        padding:5px 5px 0;
+        border:1px solid #555555;
+    }
+
+    .book_image img {
+        max-width:250px;
+    }
 
 .bookDetail {
-    border: 1px solid #000;
+        padding:25px;
+        float:right;
+        width:66%;
 }
+
+    .bookDetail p {
+
+    }
+
+    .bookDetail h1 {
+        font-size:35px;
+        margin-bottom:15px;
+        clear:none;
+        color:#2099b0;
+    }
+
+    .bookDetail .header h1 {
+        clear:right !important;
+        font-size:25px !important;
+
+    }
 
 /*** BOOK GALLERY ***/
 .bookGallery {
@@ -169,6 +241,7 @@
     border-radius: 10px;
     -moz-box-shadow:0 0 90px 5px #000;
     -webkit-box-shadow: 0 0 90px #000;
+        left:25%;
 }
 
 .simple_overlay .close {
@@ -205,12 +278,12 @@
 }
 
 .booksingle .simple_overlay {
-    text-align: center; 
+    text-align: center;
 }
 
 .booksingle .simple_overlay img {
     float: none;
-    max-width: 134px;   
+    max-width: 134px;
 }
 
 .simple_overlay li a {
@@ -218,32 +291,36 @@
     -webkit-border-radius: none;
     border-radius: none;
     -moz-box-shadow: none;
-    -webkit-box-shadow: none;   
+    -webkit-box-shadow: none;
     box-shadow: none;
     color: #FFFFFF;
 }
 
 .simple_overlay h1 {
-    color: #3D241E;
+    color: #2099b0;
     border-bottom: 1px dotted #393939;
     font-size: 35px;
-    font-weight: normal;
+    font-weight: 100;
     line-height: 40px;
     margin-bottom: 13px;
     padding-bottom: 10px;
-    padding-right: 250px;
+    padding-right: 60px;
     /* background: url( <?php echo get_bloginfo ( 'template_directory' );  ?>/images/bg_h1swirl.png) no-repeat scroll right top transparent; */
 }
 
 .simple_overlay h1 span {
     color: #990000;
-    font-style: italic; 
+    font-style: italic
 }
 
 .simple_overlay .left {
     float: left;
     width: 225px;
 }
+
+    .simple_overlay .left img {
+        max-width:200px;
+    }
 
 .simple_overlay .right {
     float: right;
@@ -252,18 +329,57 @@
 
 .buttonBookstore {
     display: block;
-    background: url(<?php echo get_bloginfo ( 'template_directory' );  ?>/images/jhc_books/retailer_sprite.png) no-repeat 0 0;
+    background: url(<?php echo get_bloginfo ( 'template_directory' );  ?>/images/jhc_books/bookseller-sprite.png) no-repeat 0 0;
     width: 145px;
     height: 40px;
     text-indent: -999999px;
 }
 
 .buttonAmazon {
-    background-position: 0 0;
+    background-position:-18px -21px;
 }
 
 .buttonBN {
-    background-position: 0 -96px;
+    background-position:-178px -15px;
+}
+
+    .buttonCBD {
+    background-position: -7px -100px;
+    width: 151px;
+}
+    .buttonLIFEWAY {
+    background-position: -182px -171px;
+}
+    .buttonFAMILY {
+    background-position: -35px -168px;
+    height: 49px;
+}
+.buttonPARABLE {
+    background-position: -23px -237px;
+    height: 49px;
+}
+    .buttonBAM {
+    background-position: -368px -15px;
+}
+
+    .buttonCOKESBURY {
+    background-position: -173px -92px;
+    width: 151px;
+}
+
+    .buttonCONCORDIA {
+    background-position: -346px -77px;
+    height: 70px;
+}
+
+    .buttonMARDEL {
+    background-position: -339px -170px;
+    height: 50px;
+}
+
+    .buttonWOLVERTON {
+    background-position: -193px -239px;
+    height: 52px;
 }
 
 /* new clearfix */
