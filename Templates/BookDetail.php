@@ -20,13 +20,7 @@
         <p>{@book_description}</p>
     </div>
 
-<<<<<<< HEAD
-    <div class="footer">
-        <a href="<?php echo get_bloginfo ( 'url' );  ?>/books">Back to Books</a>
-    </div>
-=======
 
->>>>>>> Fixed Bookstore Buttons
 
     <div class="overlayWindowWrapper">
         <a href="#" rel="#{@permalink}" alt="Take a Chance on Me" target="_blank" class="btnBuyNow" data-bookid="take-a-chance-on-me">Buy Now!</a>
@@ -49,18 +43,6 @@
                     <li><a target="_blank" href="{@bncom_link}" class="buttonBookstore buttonBN">BN.com</a></li>
                 <?php } ?>
                 <?php if ( 0 < strlen( $obj->field( 'cbdcom_link' ) ) ) { ?>
-<<<<<<< HEAD
-                    <li><a target="_blank" href="{@cbdcom_link}"><img width="110" style="border:none;" src="<?php echo get_bloginfo ( 'template_directory' );  ?>/images/jhc_books/cbd-logo.png"></a></li>
-                <?php } ?>
-                <?php if ( 0 < strlen( $obj->field( 'lifewaycom_link' ) ) ) { ?>
-                    <li><a target="_blank" href="{@lifewaycom_link}"><img style="border:none;" src="<?php echo get_bloginfo ( 'template_directory' );  ?>/images/jhc_books/lifeway-logo.png"></a></li>
-                <?php } ?>
-                <?php if ( 0 < strlen( $obj->field( 'familychristiancom_link' ) ) ) { ?>
-                    <li><a target="_blank" href="{@familychristiancom_link}"><img style="border:none;" src="<?php echo get_bloginfo ( 'template_directory' );  ?>/images/jhc_books/family-christian-logo.png"></a></li>
-                <?php } ?>
-                <?php if ( 0 < strlen( $obj->field( 'parablecom_link' ) ) ) { ?>
-                    <li><a target="_blank" href="{@parablecom_link}"><img style="border:none;" src="<?php echo get_bloginfo ( 'template_directory' );  ?>/images/jhc_books/parable-logo.png"></a></li>
-=======
                     <li><a target="_blank" href="{@cbdcom_link}" class="buttonBookstore buttonCBD">CBD.com</a></li>
                 <?php } ?>
                 <?php if ( 0 < strlen( $obj->field( 'lifewaycom_link' ) ) ) { ?>
@@ -71,18 +53,14 @@
                 <?php } ?>
                 <?php if ( 0 < strlen( $obj->field( 'parablecom_link' ) ) ) { ?>
                     <li><a target="_blank" href="{@parablecom_link}" class="buttonBookstore buttonPARABLE">Parable.com</a></li>
->>>>>>> Fixed Bookstore Buttons
                 <?php } ?>
                 </ul>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-=======
 
     <div class="footer" style="margin-top:18px;">
         <a class="btnBuyNow" href="<?php echo get_bloginfo ( 'url' );  ?>/books">Back to Books</a>
     </div>
 
->>>>>>> Fixed Bookstore Buttons
 </div>
