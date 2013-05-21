@@ -13,11 +13,17 @@
             <?php if ( 0 < strlen( $obj->field( 'publisher' ) ) ) { ?>
                 {@publisher}
             <?php } ?>
+            <?php if ( 0 < strlen( $obj->field( 'publisher' ) ) && 0 < strlen( $obj->field( 'publish_date' ) ) ) { ?>
+                 / 
+            <?php } ?>
             <?php if ( 0 < strlen( $obj->field( 'publish_date' ) ) ) { ?>
-                / {@publish_date}
+                {@publish_date}
+            <?php } ?>
+            <?php if ( 0 < strlen( $obj->field( 'publish_date' ) ) && 0 < strlen( $obj->field( 'format' ) ) ) { ?>
+                 / 
             <?php } ?>
             <?php if ( 0 < strlen( $obj->field( 'format' ) ) ) { ?>
-                / {@format}
+                {@format}
             <?php } ?>
         </p>
         <div class="overlayWindowWrapper">
